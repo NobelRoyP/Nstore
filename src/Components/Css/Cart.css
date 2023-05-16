@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.CartBody{
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+    margin-top: 50px;
+    padding: 15px;
+}

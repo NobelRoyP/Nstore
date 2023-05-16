@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.Home{
+    margin-top: 50px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.Card{
+    height: 48vh;
+    width: 250px;
+    background-color: rgb(202, 255, 255);
+    border-radius: 10px;
+    margin: 10px;
+}
+.Image img{
+    height: 40vh;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.Details{
+    margin-top: -5px;
+    height: 8vh;
+    width: 100%;
+    background-color: rgb(170, 255, 227);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+.Details i{
+    cursor: pointer;
+}
+@media(max-width:400px){
+    .Home{
+        margin-top: 50px;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .Card{
+        height: 33vh;
+        width: 140px;
+        background-color: rgb(202, 255, 255);
+        border-radius: 10px;
+        margin: 10px;
+    }
+    .Image img{
+        height: 25vh;
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    .Details{
+        margin-top: -5px;
+        height: 8vh;
+        width: 100%;
+        background-color: rgb(170, 255, 227);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 10px;
+    }
+    .Details i{
+        cursor: pointer;
+    }
+}
