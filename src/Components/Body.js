@@ -26,7 +26,7 @@ function Body() {
 
                 <div className='Card'>
                     <div className='Image'>
-                        <img src='https://5.imimg.com/data5/SELLER/Default/2022/10/DG/BH/LE/23328273/whatsapp-image-2022-10-06-at-23-41-44-1--500x500.jpeg' />
+                        <img src='https://www.google.com/imgres?imgurl=https%3A%2F%2Fassets.adidas.com%2Fimages%2Fh_840%2Cf_auto%2Cq_auto%2Cfl_lossy%2Cc_fill%2Cg_auto%2F15f901c90a9549d29104aae700d27efb_9366%2FSUPERSTAR_SHOES_Black_EG4959_01_standard.jpg&tbnid=UCAQcSb-a0gM5M&vet=1&imgrefurl=https%3A%2F%2Fwww.adidas.co.in%2Fsuperstar-shoes%2FEG4959.html&docid=U-L_iFz1jl9_wM&w=840&h=840&hl=en-US&source=sh%2Fx%2Fim' />
                         <div className='Details'>
                             <p className='Description'>Converse</p>
                             <i className='fa-solid fa-shopping-cart'></i>
