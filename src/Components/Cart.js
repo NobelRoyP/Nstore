@@ -5,7 +5,9 @@ function Cart() {
   return (
     <>
       <div className='CartBody'>
-        Cart
+        <div className='CartInner'>
+          Cart
+        </div>
       </div>
     </>
   )

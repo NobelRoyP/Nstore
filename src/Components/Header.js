@@ -9,7 +9,7 @@ function Header() {
       <div className="Nav">
         <h1><Link to='/'>Nstore</Link></h1>
         <div className='Options'>
-          <a href="#" className='contact'>Contact</a>
+          <Link to="/Contact" className='contact'>Contact</Link>
           <a href="https://www.youtube.com/channel/UCAMNaRNK1eJxJsVdYUuuuQQ"><i className='icons fa-brands fa-youtube'></i></a>
           <Link to='/cart'><i className='icons fa-solid fa-shopping-cart'></i></Link>
         </div>

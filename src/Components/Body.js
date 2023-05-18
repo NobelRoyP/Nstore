@@ -26,7 +26,7 @@ function Body() {
 
                 <div className='Card'>
                     <div className='Image'>
-                        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuCNs0y6LSi0g3hfTx3bnpAU-W5d5ycKNN5w&usqp=CAU' />
+                        <img src='https://5.imimg.com/data5/SELLER/Default/2022/10/DG/BH/LE/23328273/whatsapp-image-2022-10-06-at-23-41-44-1--500x500.jpeg' />
                         <div className='Details'>
                             <p className='Description'>Converse</p>
                             <i className='fa-solid fa-shopping-cart'></i>

@@ -33,12 +33,12 @@
 .Details i{
     cursor: pointer;
 }
-@media(max-width:400px){
+@media(max-width:600px){
     .Home{
         margin-top: 50px;
         padding: 15px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
     }
     .Card{

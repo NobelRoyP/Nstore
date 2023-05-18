@@ -4,6 +4,7 @@ import './Style.css'
 import Header from './Components/Header'
 import Body from './Components/Body'
 import Cart from './Components/Cart'
+import Contact from './Components/Contact'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div>
         <Header/>
         <Routes>
+            <Route path='/Contact' element={<Contact/>}></Route>
             <Route path="/" element={<Body/>}/>
             <Route path="/cart" element={<Cart />}/>
         </Routes>
