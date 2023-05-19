@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import {getFirestore} from 'firebase/compact/firestore'
-import {getStorage} from 'firebase/storage'
+import {getStorage} from 'firebase/compact/storage'
 
 // web app's Firebase configuration
 const firebaseConfig = {
