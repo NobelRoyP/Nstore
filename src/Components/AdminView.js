@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Css/Body.css'
 import { database } from '../Firebase'
 import { useNavigate } from 'react-router-dom'
-import { collection, onSnapshot } from 'firebase/compact/firestore';
+import { collection, onSnapshot } from 'firebase/firestore';
 
 
 function Body() {
