@@ -35,7 +35,7 @@ function Body() {
                     <>
                         <div className='Card' key={item.id}>
                             <div className='Image'>
-                                <img src={item.img} alt='image' />
+                                <img src={item.img} />
                             </div>
                             <div className='Details'>
                                 <div className='DetailContent'>
@@ -47,7 +47,7 @@ function Body() {
                         </div>
                     </>
                 ))}
-            </div>
+            </div >
         </>
     )
 }

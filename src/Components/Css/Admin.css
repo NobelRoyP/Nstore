@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.AdminBody{
+    margin-top: 53px;
+    background-color: rgb(255, 255, 255);
+    height: 98vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AdminBody .InputFields{
+    background-color: rgb(223, 211, 197);
+    height: 500px;
+    width: 250px;
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.Field{
+    background-color: transparent;
+    width: 200px;
+}
+.Field input[type=text]{
+    background-color: antiquewhite;
+    border: 0;
+    border-radius: 15px;
+    height: 50px;
+    padding-left: 10px;
+}
+.Field input[type=text]:focus{
+    border: 2px solid rgb(241, 238, 233);
+}
+.Field input[type=file]{
+    border: 0;
+    border-radius: 15px;
+    background-color: antiquewhite;
+    height: 25px;
+    width: 180px;
+    padding: 20px;
+}
