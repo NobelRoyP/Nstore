@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from "react-router-dom"
 import './Css/Admin.css'
 import { database, storage } from '../Firebase'
-import { ref, getDownloadURL, uploadBytesResumable } from 'firebase/storage'
+import { ref, getDownloadURL, uploadBytesResumable } from 'firebase/compact/storage'
 import { addDoc, collection, serverTimestamp } from 'firebase/compact/firestore'
 
 const InitialState = {
