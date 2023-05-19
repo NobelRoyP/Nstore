@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import {getFirestore} from 'firebase/firestore'
+import {getFirestore} from 'firebase/compact/firestore'
 import {getStorage} from 'firebase/storage'
 
 // web app's Firebase configuration
