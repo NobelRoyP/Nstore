@@ -1,10 +1,9 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from "react-router-dom"
 import './Css/Admin.css'
 import { database, storage } from '../Firebase'
 import { ref, getDownloadURL, uploadBytesResumable } from 'firebase/storage'
-import { addDoc, collection, serverTimestamp, doc, getDoc, updateDoc } from 'firebase/firestore'
+import { doc, getDoc, updateDoc, serverTimestamp } from 'firebase/firestore'
 
 const InitialState = {
     ProductName: '',
@@ -13,7 +12,7 @@ const InitialState = {
     img: ''
 }
 
-function Admin() {
+function EditProduct() {
     const { id } = useParams();
     const [data, setData] = useState(InitialState);
     const { ProductName, Price, Color, img } = data
@@ -88,32 +87,26 @@ function Admin() {
         return errors;
     }
 
-    const handleSubmmit = async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         let errors = validate();
         if (Object.keys(errors).length) return setErrors(errors);
         setSubmit(true);
         if (id) {
-            // update existing product
             const docRef = doc(database, "products", id);
             await updateDoc(docRef, {
                 ...data,
                 timestamp: serverTimestamp()
             });
-        } else {
-            // add new product
-            await addDoc(collection(database, "products"), {
-                ...data,
-                timestamp: serverTimestamp()
-            });
+            navigate("/adminview");
         }
-        navigate("/adminview");
     }
+
     return (
         <>
             <div className='AdminBody'>
-                <h2>{id ? "Edit Product" : "Add Product"}</h2>
-                <form className='InputFields' onSubmit={handleSubmmit} >
+                <h2>Edit Product</h2>
+                <form className='InputFields' onSubmit={handleSubmit} >
                     <div className='Field f1'>
                         <p>Product Name :</p>
                         <input type="text" placeholder='Enter Product Name' name='ProductName' onChange={handleChange} value={ProductName} error={errors.ProductName ? { content: errors.ProductName } : null} required />
@@ -138,4 +131,4 @@ function Admin() {
     )
 }
 
-export default Admin
+export default EditProduct

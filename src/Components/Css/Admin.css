@@ -1,44 +1,92 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+.AdminBody {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+}
 
-.AdminBody{
-    margin-top: 53px;
-    background-color: rgb(255, 255, 255);
-    height: 98vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.AdminBody h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: #333;
 }
-.AdminBody .InputFields{
-    background-color: rgb(223, 211, 197);
-    height: 500px;
-    width: 250px;
-    padding: 25px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+
+.InputFields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.Field{
-    background-color: transparent;
-    width: 200px;
+
+.Field {
+  display: flex;
+  flex-direction: column;
 }
-.Field input[type=text]{
-    background-color: antiquewhite;
-    border: 0;
-    border-radius: 15px;
-    height: 50px;
-    padding-left: 10px;
+
+.Field p {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
 }
-.Field input[type=text]:focus{
-    border: 2px solid rgb(241, 238, 233);
+
+.Field input[type="text"],
+.Field input[type="file"] {
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s;
 }
-.Field input[type=file]{
-    border: 0;
-    border-radius: 15px;
-    background-color: antiquewhite;
-    height: 25px;
-    width: 180px;
-    padding: 20px;
+
+.Field input[type="text"]:focus {
+  border-color: #7c3aed; /* Purple focus */
+}
+
+.InputFields img {
+  margin-top: 10px;
+  width: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.InputFields input[type="submit"] {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #7c3aed;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.InputFields input[type="submit"]:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+.InputFields input[type="submit"]:hover:not(:disabled) {
+  background-color: #5b21b6;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .AdminBody {
+    padding: 16px;
+    margin: 20px;
+  }
+
+  .Field input[type="text"],
+  .Field input[type="file"] {
+    font-size: 15px;
+  }
+
+  .InputFields input[type="submit"] {
+    font-size: 15px;
+  }
 }

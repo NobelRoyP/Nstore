@@ -25,8 +25,8 @@ function Cart() {
       ...cartItem,
       ProductImage: product ? product.img : '',
       ProductName: product ? product.ProductName : '',
-      Price: product ? product.Price : 0,
-      quantity: cartItem.quantity ? cartItem.quantity : 1,
+      Price: product ? Number(product.Price) : 0,
+      quantity: cartItem.quantity ? Number(cartItem.quantity) : 1,
     };
   });
 

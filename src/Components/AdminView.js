@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom'
 import { collection, onSnapshot } from 'firebase/firestore';
 
 
+import { Link } from 'react-router-dom';
+
 function Body() {
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -42,6 +44,7 @@ function Body() {
                                     <p className='Price'><b>₹ {item.Price}</b></p>
                                     <p><b>{item.ProductName}</b></p>
                                     <p><b>{item.Color}</b></p>
+                                    <Link to={`/editproduct/${item.id}`} className="edit-button">Edit</Link>
                                 </div>
                             </div>
                         </div>

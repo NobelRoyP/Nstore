@@ -10,6 +10,7 @@ import AdminView from './Components/AdminView'
 import Login from './Components/Login';
 import { CartProvider } from './CartContext';
 import { UserProvider } from './UserContext';
+import EditProduct from "./Components/EditProduct";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path='/admin' element={<Admin/>}/>
               <Route path='/adminview' element={<AdminView/>}/>
+              <Route path='/editproduct/:id' element={<EditProduct/>}/>
           </Routes>
         </div>
       </CartProvider>
