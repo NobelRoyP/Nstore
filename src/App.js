@@ -7,21 +7,27 @@ import Cart from './Components/Cart'
 import Contact from './Components/Contact'
 import Admin from './Components/Admin'
 import AdminView from './Components/AdminView'
+import Login from './Components/Login';
+import { CartProvider } from './CartContext';
+import { UserProvider } from './UserContext';
 
 function App() {
   return (
-    <>
-      <div>
-        <Header/>
-        <Routes>
-            <Route path='/Contact' element={<Contact/>}></Route>
-            <Route path="/" element={<Body/>}/>
-            <Route path="/cart" element={<Cart />}/>
-            <Route path='/admin' element={<Admin/>}/>
-            <Route path='/adminview' element={<AdminView/>}/>
-        </Routes>
-      </div>
-    </>
+    <UserProvider>
+      <CartProvider>
+        <div>
+          <Header/>
+          <Routes>
+              <Route path='/Contact' element={<Contact/>}></Route>
+              <Route path="/" element={<Body/>}/>
+              <Route path="/cart" element={<Cart />}/>
+              <Route path="/login" element={<Login />} />
+              <Route path='/admin' element={<Admin/>}/>
+              <Route path='/adminview' element={<AdminView/>}/>
+          </Routes>
+        </div>
+      </CartProvider>
+    </UserProvider>
   );
 }
 

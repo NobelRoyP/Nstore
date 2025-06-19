@@ -1,94 +1,153 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
-.Home{
-    margin-top: 50px;
+.Home {
+    margin-top: 8em;
     padding: 15px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
-    
 }
-.Card{
-    height: 350px;
+
+.Card {
+    height: 25em;
     width: 230px;
-    background-color: rgb(238, 229, 217);
+    background-color: rgb(243, 224, 200);
     border-radius: 15px;
     margin: 10px;
+    margin-left: 2em;
+    padding: 0.3em;
+    transition: all 0.3s ease-in-out;
 }
-.Image img{
+
+.Card:hover {
+    background-color: rgb(220, 210, 195);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.Image img {
     height: 230px;
     width: 100%;
     border-radius: 10px;
     object-fit: cover;
+    margin-bottom: 1em;
 }
-.Details{
-    margin-top: -5px;
-    padding: 15px;
+
+.Details {
+    position: relative;
     height: 85px;
-    width: 88%;
-    background-color: rgb(238, 229, 217);
+    width: 100%;
     border-radius: 15px;
     line-height: 1;
 }
-.Details i{
+
+.Details i {
     cursor: pointer;
 }
-.Details .DetailContent{
+
+.Details .DetailContent {
     margin-top: 0px;
     color: rgb(78, 78, 78);
 }
-.DetailContent .Price{
+
+.DetailContent .Price {
     margin-top: -5px;
     font-family: sans-serif;
     font-size: 20px;
     color: rgb(25, 78, 25);
     margin-bottom: 10px;
 }
-.DetailContent p{
+
+.DetailContent p {
     margin-top: 0px;
 }
-@media(max-width:600px){
-    .Home{
-        margin-top: 50px;
+
+@media(max-width:600px) {
+    .Home {
+        margin-top: 0;
         padding: 15px;
         display: flex;
-        justify-content: center;
+        justify-content: left;
         flex-wrap: wrap;
     }
-    .Card{
-        height: 290px;
+
+    .Card {
+        height: 23em;
         width: 140px;
         border-radius: 10px;
         margin: 10px;
     }
-    .Image img{
+
+    .Image img {
         height: 160px;
         width: 100%;
         border-radius: 10px;
         object-fit: cover;
     }
-    .Details{
+
+    .Details {
         margin-top: -20px;
         height: 110px;
         width: 78%;
         border-radius: 15px;
         line-height: 1;
     }
-    .Details i{
+
+    .Details i {
         cursor: pointer;
     }
-    .Details .DetailContent{
+
+    .Details .DetailContent {
         margin-top: 0px;
         color: rgb(78, 78, 78);
     }
-    .DetailContent .Price{
+
+    .DetailContent .Price {
         margin-top: 3px;
         font-family: sans-serif;
         font-size: 20px;
         color: rgb(25, 78, 25);
         margin-bottom: 10px;
     }
-    .DetailContent p{
+
+    .DetailContent p {
         margin-top: 0px;
     }
+}
+
+.AddToCart {
+    background-color: #4541ff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    left: 0;
+    bottom: 1px;
+}
+
+.CartButton {
+    background-color: #3b3b3c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    left: 0;
+    bottom: 1px;
+}
+
+.CartButton:hover {
+    background-color: #a7a9a7;
 }

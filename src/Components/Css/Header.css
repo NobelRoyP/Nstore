@@ -11,7 +11,7 @@
     position: fixed;
     top: 0;
     left: 0;
-
+    z-index: 1000;
 }
 .Nav a{
     text-decoration: none;
@@ -30,6 +30,7 @@ h1{
     justify-content: space-around;
     align-items: center;
     border-radius: 5px;
+    position: relative;
 }
 .Options a{
     text-decoration: none;
@@ -37,6 +38,43 @@ h1{
 }
 .Options .icons{
     font-size: 22px;
+}
+.profile-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: rgb(61, 53, 53);
+    position: relative;
+}
+.user-dropdown {
+    position: relative;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: rgb(234, 241, 234);
+    border: 1px solid rgb(71, 71, 71);
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    min-width: 120px;
+    z-index: 1001;
+}
+.dropdown-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    color: rgb(61, 53, 53);
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    font-size: 14px;
+    text-decoration: none;
+}
+.dropdown-item:hover {
+    background-color: rgb(200, 210, 200);
 }
 @media(max-width:400px){
     .Options{
@@ -49,4 +87,22 @@ h1{
         align-items: center;
         border-radius: 5px;
     }
+}
+
+.cart-link {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  pointer-events: none;
 }

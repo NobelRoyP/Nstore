@@ -4,11 +4,82 @@
     background-color: rgb(255, 255, 255);
     height: 100vh;
     width: 100%;
-    margin-top: 60px;
+    margin-top: 8em;
 }
 .CartInner{
     height: 97.5vh;
     width: 90%;
     background-color: transparent;
     padding: 10px;
+}
+
+.CartProduct {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.CartProductImage {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.CartProductImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.CartProductDetails {
+    flex-grow: 1;
+}
+
+.CartProductTitle {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.CartProductQuantity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.CartProductQuantity label {
+    margin-right: 5px;
+}
+
+.CartProductQuantity input {
+    width: 40px;
+    padding: 5px;
+    text-align: center;
+}
+
+.CartProductRemove {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.CartProductPrice {
+    font-weight: bold;
+}
+
+.CartTotal {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.3em;
+}
+
+.CartCheckout {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.1em;
 }
