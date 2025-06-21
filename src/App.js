@@ -11,6 +11,7 @@ import Login from './Components/Login';
 import { CartProvider } from './CartContext';
 import { UserProvider } from './UserContext';
 import EditProduct from "./Components/EditProduct";
+import ProductDetail from "./Components/ProductDetail";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               <Route path='/admin' element={<Admin/>}/>
               <Route path='/adminview' element={<AdminView/>}/>
               <Route path='/editproduct/:id' element={<EditProduct/>}/>
+              <Route path='/product/:id' element={<ProductDetail/>}/>
           </Routes>
         </div>
       </CartProvider>

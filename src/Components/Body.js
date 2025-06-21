@@ -41,31 +41,33 @@ function Body() {
             <div className='Home'>
                 {product && product.map((item) => (
                     <div key={item.id}>
-                        <div className='Card'>
-                            <div className='Image'>
-                                <img src={item.img} alt='' />
-                            </div>
-                            <div className='Details'>
-                                <div className='DetailContent'>
-                                    <p className='Price'><b>₹ {item.Price}</b></p>
-                                    <p><b>{item.ProductName}</b></p>
-                                    <p><b>{item.Color}</b></p>
-                                    {!isInCart(item.id) ? (
-                                        <button className='AddToCart' onClick={() => {
-                                            if (!user) {
-                                                navigate('/login');
-                                            } else {
-                                                addToCart(item);
-                                            }
-                                        }}>Add to Cart</button>
-                                    ) : (
-                                        <button className='CartButton' onClick={() => {
-                                            navigate('/cart');
-                                        }}>Go to Cart</button>
-                                    )}
-                                </div>
+                    <div className='Card' onClick={() => navigate(`/product/${item.id}`)} style={{ cursor: 'pointer' }}>
+                        <div className='Image'>
+                            <img src={item.img} alt='' />
+                        </div>
+                        <div className='Details'>
+                            <div className='DetailContent'>
+                                <p className='Price'><b>₹ {item.Price}</b></p>
+                                <p><b>{item.ProductName}</b></p>
+                                <p><b>{item.Color}</b></p>
+                                {!isInCart(item.id) ? (
+                                    <button className='AddToCart' onClick={(e) => {
+                                        e.stopPropagation();
+                                        if (!user) {
+                                            navigate('/login');
+                                        } else {
+                                            addToCart(item);
+                                        }
+                                    }}>Add to Cart</button>
+                                ) : (
+                                    <button className='CartButton' onClick={(e) => {
+                                        e.stopPropagation();
+                                        navigate('/cart');
+                                    }}>Go to Cart</button>
+                                )}
                             </div>
                         </div>
+                    </div>
                     </div>
                 ))}
             </div>

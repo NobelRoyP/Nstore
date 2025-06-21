@@ -48,7 +48,15 @@ function Header() {
           {user ? (
             <div className="user-dropdown" ref={dropdownRef}>
               <button onClick={toggleDropdown} className="profile-button" title="Profile">
-                <i className="icons fa-solid fa-user"></i>
+                {user.photoURL ? (
+                  <img
+                    src={user.photoURL}
+                    alt="User Google Icon"
+                    className="google-user-icon"
+                  />
+                ) : (
+                  <i className="icons fa-solid fa-user"></i>
+                )}
               </button>
               {dropdownOpen && (
                 <div className="dropdown-menu">
