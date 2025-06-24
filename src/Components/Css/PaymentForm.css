@@ -1,0 +1,42 @@
+.payment-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.payment-form .CardElement {
+  margin-bottom: 20px;
+  padding: 10px; /* Add some padding for better appearance */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 4px; /* Add some rounded corners */
+}
+
+.payment-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.payment-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.payment-form .error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.payment-success {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: green;
+}

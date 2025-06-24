@@ -3,10 +3,17 @@ import './Css/Cart.css';
 import { CartContext } from '../CartContext';
 import { database } from '../Firebase';
 import { collection, onSnapshot } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
 
 function Cart() {
   const { cart, removeFromCart, updateCartItemQuantity } = useContext(CartContext);
   const [products, setProducts] = useState([]);
+  const [isCartEmpty, setIsCartEmpty] = useState(true);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setIsCartEmpty(cart.length === 0);
+  }, [cart]);
 
   useEffect(() => {
     const productsCollection = collection(database, 'products');
@@ -52,7 +59,15 @@ function Cart() {
             {cartWithDetails.map((item) => (
               <li key={item.id} className="CartProduct">
                 <div className="CartProductImage">
-                  <img src={item.ProductImage} alt={item.ProductName} />
+                  {item.ProductImage ? (
+                    <img
+                      src={item.ProductImage}
+                      alt={item.ProductName}
+                      onLoad={(e) => e.target.classList.add('loaded')}
+                    />
+                  ) : (
+                    <div className="CartProductImageLoader">Loading...</div>
+                  )}
                 </div>
                 <div className="CartProductDetails">
                   <div className="CartProductTitle">{item.ProductName}</div>
@@ -75,7 +90,13 @@ function Cart() {
         <div className="CartTotal">
           Total: ₹{cartWithDetails.reduce((total, item) => total + item.Price * item.quantity, 0)}
         </div>
-        <button className="CartCheckout">Checkout</button>
+        <button
+          className={`CartCheckout ${isCartEmpty ? 'CartCheckout--disabled' : ''}`}
+          onClick={() => navigate('/checkout')}
+          disabled={isCartEmpty}
+        >
+          Checkout
+        </button>
       </div>
     </div>
   );

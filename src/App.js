@@ -12,6 +12,7 @@ import { CartProvider } from './CartContext';
 import { UserProvider } from './UserContext';
 import EditProduct from "./Components/EditProduct";
 import ProductDetail from "./Components/ProductDetail";
+import Checkout from "./Components/Checkout";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route path='/Contact' element={<Contact/>}></Route>
               <Route path="/" element={<Body/>}/>
               <Route path="/cart" element={<Cart />}/>
+              <Route path="/checkout" element={<Checkout />} />
               <Route path="/login" element={<Login />} />
               <Route path='/admin' element={<Admin/>}/>
               <Route path='/adminview' element={<AdminView/>}/>
